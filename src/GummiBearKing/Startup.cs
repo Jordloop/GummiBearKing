@@ -19,6 +19,7 @@ namespace GummiBearKing
                 .AddJsonFile("appsettings.json");
             Configuration = builder.Build();
         }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFramework()
@@ -26,11 +27,8 @@ namespace GummiBearKing
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
         }
 
-
         public void Configure(IApplicationBuilder app)
         {
-
-
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");
