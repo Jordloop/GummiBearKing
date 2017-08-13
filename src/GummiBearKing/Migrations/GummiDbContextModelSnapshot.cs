@@ -21,6 +21,8 @@ namespace GummiBearKing.Migrations
                     b.Property<int>("GummiId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("Cost");
+
                     b.Property<string>("Name");
 
                     b.Property<string>("Origin");
