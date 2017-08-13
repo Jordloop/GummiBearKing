@@ -9,7 +9,7 @@
 
 
 <div class="main-container">
-    <div class="main-img">
+    <div class="imgContainer">
 
     </div>
     <div class="productsContainer">
@@ -18,12 +18,18 @@
         {
             <div class="product">
                 <div class="productName">
-                    @Html.DisplayFor(modelItem => listGummi.Name)
+                    <h1>@Html.DisplayFor(modelItem => listGummi.Name)</h1>
                 </div>
                 <div class="productButtons">
-                    @Html.ActionLink("Details", "Details", new { id = listGummi.GummiId }) |
-                    @Html.ActionLink("Edit", "Edit", new { id = listGummi.GummiId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = listGummi.GummiId })
+                    <div class="link">
+                        @Html.ActionLink("Details", "Details", new { id = listGummi.GummiId })
+                    </div>
+                    <div class="link">
+                        @Html.ActionLink("Edit", "Edit", new { id = listGummi.GummiId })
+                    </div>
+                    <div class="link">
+                        @Html.ActionLink("Delete", "Delete", new { id = listGummi.GummiId })
+                    </div>
                 </div>
             </div>
         }
