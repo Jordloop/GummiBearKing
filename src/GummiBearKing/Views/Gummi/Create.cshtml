@@ -4,19 +4,31 @@
 }
 
 @model GummiBearKing.Models.Gummi
+<link href="~/Styles/Gummi/FormStyle.css" rel="stylesheet" />
 
+<div class="formHeading">
+    <h3>Add new Gummi</h3>
+</div>
+<div class="formMain">
 
-<h4>Add new Gummi</h4>
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
-     
-    @Html.LabelFor(model => model.Origin)
-    @Html.TextBoxFor(model => model.Origin)
+    @using (Html.BeginForm())
+    {
+        <div class="forms">
+            <div class="formItem">
+                @Html.LabelFor(model => model.Name)
+                @Html.TextBoxFor(model => model.Name)
+            </div>
+            <div class="formItem">
+                @Html.LabelFor(model => model.Origin)
+                @Html.TextBoxFor(model => model.Origin)
+            </div>
+            <div class="formItem">
+                @Html.LabelFor(model => model.Cost)
+                @Html.TextBoxFor(model => model.Cost)
+            </div>
+        </div>
+        <input type="submit" value="Add new Gummi" />
+    }
 
-    @Html.LabelFor(model => model.Cost)
-    @Html.TextBoxFor(model => model.Cost)
-    <input type="submit" value="Add new Gummi" />
-}
+</div>
 <p>@Html.ActionLink("Back to list", "Index")</p>
