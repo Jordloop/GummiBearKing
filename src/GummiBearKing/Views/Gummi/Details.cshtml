@@ -4,9 +4,12 @@
 }
 
 @model GummiBearKing.Models.Gummi
+<link href="~/Styles/Gummi/DetailsStyle.css" rel="stylesheet" />
 
-<h3>@Html.DisplayFor(model => model.Name)</h3>
+<div class="main">
+    <h3>@Html.DisplayFor(model => model.Name)</h3>
 
-@Html.DisplayNameFor(model => model.Origin): @Html.DisplayFor(model => model.Origin) <br/>
-@Html.DisplayNameFor(model => model.Cost): $@Html.DisplayFor(model => model.Cost)
-<p>@Html.ActionLink("Back to list", "Index")</p>
+    @Html.DisplayNameFor(model => model.Origin): @Html.DisplayFor(model => model.Origin) <br />
+    @Html.DisplayNameFor(model => model.Cost): $@Html.DisplayFor(model => model.Cost)
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+</div>
